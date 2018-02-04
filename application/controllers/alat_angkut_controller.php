@@ -1,5 +1,6 @@
 <?php if (! defined('BASEPATH')) exit('No direct script access allowed');
 class alat_angkut_controller extends CI_Controller{
+    //tes
 	function __construct()
 	{
 		parent::__construct();
