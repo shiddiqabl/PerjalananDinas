@@ -22,7 +22,7 @@
 									</div>										
 									<div class="form-group">
 										<label for="Nama_Provinsi">Nama Provinsi</label>								
-										<input class="form-control" name="nama_prov" maxlength="40" placeholder="Contoh = Sumatera Utara">	
+										<input class="form-control" name="nama_prov" maxlength="40" placeholder="Contoh = Sumatera Utara" pattern="[A-Za-z\s]{3,}">	
 									</div>																
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_prov_controller/index" class="btn btn-danger" role="button">Batal</a>

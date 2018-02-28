@@ -77,6 +77,7 @@ class daftar_kec_controller extends CI_Controller{
 	{
 		$where = array('ID_KEC' => $id_kec);
 		$this->daftar_kec_model->hapus_data($where, 'daftar_kec');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data kecamatan dengan kode '.$id_kec.' telah dihapus</div>');
 		redirect('daftar_kec_controller/index');
 	}
 }

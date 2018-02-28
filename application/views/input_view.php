@@ -22,7 +22,7 @@
 									</div>										
 									<div class="form-group">
 										<label for="Nama">Nama</label>								
-										<input class="form-control" name="NAMA" placeholder="NAMA tidak melebihi 30 karakter" maxlength="30" required>	
+										<input class="form-control" name="NAMA" placeholder="NAMA tidak melebihi 30 karakter" maxlength="30" pattern="[A-Za-z\s]{3,}" required>	
 									</div>
 									<div class="form-group">
 										<label for="Jabatan">Jabatan</label>								

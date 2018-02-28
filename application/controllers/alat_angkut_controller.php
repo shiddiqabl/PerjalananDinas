@@ -58,6 +58,7 @@ class alat_angkut_controller extends CI_Controller{
 	{
 		$where = array('ID_ANGKUT' => $id_angkut);
 		$this->alat_angkut_model->hapus_data($where, 'alat_angkut');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data alat angkut dengan kode '.$id_angkut.' telah dihapus</div>');
 		redirect('alat_angkut_controller/index');
 	}
 }

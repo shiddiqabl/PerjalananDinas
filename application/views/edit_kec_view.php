@@ -46,7 +46,7 @@
 									</div>
 									<div class="form-group">
 										<label for="Nama_Kec">Nama Kecamatan</label>
-										<input class="form-control" type="text" name="NAMA_KEC_EDIT" value="<?php echo $p->NAMA_KEC?>" maxlength="40">
+										<input class="form-control" type="text" name="NAMA_KEC_EDIT" value="<?php echo $p->NAMA_KEC?>" maxlength="40" pattern="[A-Za-z\s]{3,}">
 									</div>
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_kec_controller/index" class="btn btn-danger" role="button">Batal</a>

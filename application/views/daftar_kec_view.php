@@ -12,7 +12,12 @@
             		</a>            		
             		<br>
             	</div>
-            </div>   
+            </div> 
+             <?php 
+				if($this->session->flashdata('message')){
+					echo $this->session->flashdata('message');
+				}
+			?>         
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
@@ -82,7 +87,7 @@
       				</div>
       				<div class="modal-footer">
         				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-        				<a id="link_hapus" href=""><button type="button" class="btn btn-primary" >Hapus</button></a>
+        				<a id="link_hapus" href=""><button type="button" class="btn btn-danger" >Hapus</button></a>
       				</div>
    				 </div>
   			</div>
@@ -97,7 +102,7 @@
       				<div class="modal-body">
         				ID Kecamatan : <b><span id="id_kec"></span></b> <br />
         				Provinsi : <b><span id="nama_prov"></span></b><br />
-        				Kota : <b><span id="nama_kota"></span></b> 
+        				Kota : <b><span id="nama_kota"></span></b><br /> 
         				Kecamatan : <b><span id="nama_kec"></span></b>       				        				
       				</div>
       				<div class="modal-footer">

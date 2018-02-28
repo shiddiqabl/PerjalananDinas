@@ -56,6 +56,7 @@ class pangkat_controller extends CI_Controller{
 	{
 		$where = array('ID_PANGKAT' => $id_pangkat);
 		$this->pangkat_model->hapus_data($where, 'pangkat');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data pangkat '.$id_pangkat.' telah dihapus</div>');
 		redirect('pangkat_controller/index');
 	}
 }

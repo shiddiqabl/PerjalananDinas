@@ -24,7 +24,7 @@
 									</div>
 									<div class="form-group">
 										<label for="Nama_Provinsi">Nama Provinsi</label>
-										<input class="form-control" type="text" name="NAMA_PROV_EDIT" value="<?php echo $p->NAMA_PROV?>" maxlength="40">
+										<input class="form-control" type="text" name="NAMA_PROV_EDIT" value="<?php echo $p->NAMA_PROV?>" maxlength="40" pattern="[A-Za-z\s]{3,}">
 									</div>
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_prov_controller/index" class="btn btn-danger" role="button">Batal</a>

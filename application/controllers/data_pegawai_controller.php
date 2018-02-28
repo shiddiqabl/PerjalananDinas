@@ -70,6 +70,7 @@ class data_pegawai_controller extends CI_Controller{
 	{
 		$where = array('NIP' => $nip);
 		$this->data_pegawai_model->hapus_data($where, 'data_pegawai');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data pegawai NIP '.$nip.' telah dihapus</div>');
 		redirect('data_pegawai_controller/index');
 	}
 }

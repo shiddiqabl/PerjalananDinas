@@ -36,14 +36,14 @@
                                         </select>	
 									</div>
 									<div class="form-group">
-										<label for="Kota">Kota</label>								
+										<label for="Kota">Kota/Kabupaten</label>								
 										<select class="form-control " data-live-search="true" name="id_kota" id="id_kota">
-                                        	<option value="">--Pilih Kota--</option>                                         
+                                        	<option value="">--Pilih Kota/Kabupaten--</option>                                         
                                         </select>	
 									</div>										
 									<div class="form-group">
 										<label for="Nama_Kecamatan">Kecamatan</label>								
-										<input class="form-control" name="nama_kecamatan" maxlength="50" placeholder="Contoh = Tembalang">	
+										<input class="form-control" name="nama_kecamatan" maxlength="50" placeholder="Contoh = Tembalang" pattern="[A-Za-z\s]{3,}">	
 									</div>																
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_kec_controller/index" class="btn btn-danger" role="button">Batal</a>

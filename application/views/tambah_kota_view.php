@@ -35,8 +35,8 @@
                                         </select>	
 									</div>									
 									<div class="form-group">
-										<label for="Nama_Kota">Kota</label>								
-										<input class="form-control" name="nama_kota" maxlength="40" placeholder="Contoh = Semarang">	
+										<label for="Nama_Kota">Kota/Kabupaten</label>								
+										<input class="form-control" name="nama_kota" maxlength="40" placeholder="Contoh = Semarang" pattern="[A-Za-z\s]{3,}">	
 									</div>																
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_kota_controller/index" class="btn btn-danger" role="button">Batal</a>

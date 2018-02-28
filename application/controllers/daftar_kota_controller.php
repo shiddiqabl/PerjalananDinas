@@ -72,6 +72,7 @@ class daftar_kota_controller extends CI_Controller{
 	{
 		$where = array('id_kota' => $id_kota);
 		$this->daftar_kota_model->hapus_data($where, 'daftar_kota');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data kota/kabupaten dengan kode '.$id_kota.' telah dihapus</div>');
 		redirect('daftar_kota_controller/index');
 	}
 }

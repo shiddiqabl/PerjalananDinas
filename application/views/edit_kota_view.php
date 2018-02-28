@@ -39,7 +39,7 @@
 									</div>	
 									<div class="form-group">
 										<label for="Nama_Kota">Nama Kota</label>
-										<input class="form-control" type="text" name="NAMA_KOTA_EDIT" value="<?php echo $p->NAMA_KOTA?>" maxlength="40">
+										<input class="form-control" type="text" name="NAMA_KOTA_EDIT" value="<?php echo $p->NAMA_KOTA?>" maxlength="40" pattern="[A-Za-z\s]{3,}">
 									</div>
 									<input class="btn btn-primary" type="submit" value="Simpan">
 									<a href="<?php echo base_url();?>daftar_kota_controller/index" class="btn btn-danger" role="button">Batal</a>

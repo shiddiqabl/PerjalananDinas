@@ -57,6 +57,7 @@ class daftar_prov_controller extends CI_Controller{
 	{
 		$where = array('id_prov' => $id_provinsi);
 		$this->daftar_prov_model->hapus_data($where, 'daftar_prov');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data provinsi dengan kode '.$id_provinsi.' telah dihapus</div>');
 		redirect('daftar_prov_controller/index');
 	}
 }

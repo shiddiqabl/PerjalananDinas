@@ -24,7 +24,7 @@
 									</div>
 									<div class="form-group">
 										<label for="Nama">Nama</label>
-										<input class="form-control" type="text" name="NAMA_EDIT" value="<?php echo $p->NAMA?>" maxlength="30">
+										<input class="form-control" type="text" name="NAMA_EDIT" value="<?php echo $p->NAMA?>" maxlength="30" pattern="[A-Za-z\s]{3,}">
 									</div>
 									<div class="form-group">
 										<label for="Jabatan">Jabatan</label>

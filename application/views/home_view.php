@@ -14,7 +14,11 @@
             		</a>            		
             		<br>
             	</div>
-            	
+             <?php 
+				if($this->session->flashdata('message')){
+					echo $this->session->flashdata('message');
+				}
+			?>	
             </div>
             <div class="row">
                 <div  class="col-lg-12">
@@ -50,7 +54,7 @@
 										<td><?php echo $d->NAMA; ?></td>																				
 										<td><?php echo $d->STATUS; ?></td>										
 										<td><?php if($d->ID_STATUS == 'S2'){
-												  		echo 'Kota '.$daftar_kota[substr($d->id_tujuan, 5,5)];
+												  		echo ''.$daftar_kota[substr($d->id_tujuan, 5,5)];
 													}else 
 												  	{
 												  		echo 'Kecamatan '.$daftar_kec[substr($d->id_tujuan, 10,5)];	
@@ -64,7 +68,7 @@
 												data-id="<?php echo $d->id_perjalanan;?>" data-nip="<?php echo $d->NIP;?>" 
 												data-nama="<?php echo $d->NAMA;?>" data-id_tujuan="<?php echo substr($d->id_tujuan, 5, 5);?>" 
 												data-nama_tujuan="<?php if(strlen($d->id_tujuan) == 10){
-												  							echo 'Kota '.$daftar_kota[substr($d->id_tujuan, 5,5)];
+												  							echo ''.$daftar_kota[substr($d->id_tujuan, 5,5)];
 																		}else 
 												  						{
 												  							echo 'Kecamatan '.$daftar_kec[substr($d->id_tujuan, 10,5)];	
@@ -113,7 +117,7 @@
       				</div>
       				<div class="modal-footer">
         				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-        				<a id="link_hapus" href=""><button type="button" class="btn btn-primary" >Hapus</button></a>
+        				<a id="link_hapus" href=""><button type="button" class="btn btn-danger" >Hapus</button></a>
       				</div>
    				 </div>
   			</div>

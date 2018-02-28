@@ -12,7 +12,12 @@
             		</a>            		
             		<br>
             	</div>
-            </div>   
+            </div>
+             <?php 
+				if($this->session->flashdata('message')){
+					echo $this->session->flashdata('message');
+				}
+			?>          
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
@@ -77,12 +82,12 @@
         				<h4 class="modal-title" id="myModalLabel">Hapus Data Provinsi</h4>
       				</div>
       				<div class="modal-body">
-        				Apakah anda yakin menghapus Provinsi <b><span id="nama"></span></b> 
+        				Apakah anda yakin menghapus data <b><span id="nama"></span></b> 
         				(ID : <b><span id="id"></span></b>) ? 
       				</div>
       				<div class="modal-footer">
         				<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-        				<a id="link_hapus" href=""><button type="button" class="btn btn-primary" >Hapus</button></a>
+        				<a id="link_hapus" href=""><button type="button" class="btn btn-danger" >Hapus</button></a>
       				</div>
    				 </div>
   			</div>

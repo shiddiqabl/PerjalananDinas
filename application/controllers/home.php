@@ -334,6 +334,7 @@ class Home extends CI_Controller{
 	{
 		$where = array('id_perjalanan' => $id_perjalanan);
 		$this->home_model->hapus_data($where, 'perjalanan_dinas');
+		$this->session->set_flashdata('message','<div class="alert alert-success" role="alert">Data perjalanan dinas dengan kode '.$id_perjalanan.' telah dihapus</div>');
 		redirect('home/index');
 	}
 	
