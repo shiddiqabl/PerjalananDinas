@@ -10,6 +10,7 @@ class Home extends CI_Controller{
 		$this->load->model('daftar_kec_model');
 		$this->load->model('status_lokasi_model');
 		$this->load->model('alat_angkut_model');
+		$this->load->model('user');
 		$this->load->library('word');
 	}
 	
@@ -330,6 +331,36 @@ class Home extends CI_Controller{
 		$this->home_model->update_data($where, $data, 'perjalanan_dinas');
 		redirect('home/index');
 	}
+	
+	function profil()
+	{
+	    $session_data = $this->session->userdata('logged_in');
+	    $username = $session_data['username'];
+	    $where = array('username' => $username);
+	    $data['uname'] = $username;
+	    $data['data_profil'] = $this->user->ambil_data($where, 'users')->result();
+	    $data['judul'] = 'Profil Pengguna';
+	    $this->load->view('templates/header', $data);
+	    $this->load->view('profil_view', $data);
+	    $this->load->view('templates/footer');
+	    
+	}
+	
+	function update_profil()
+	{
+	    $username = $this->input->post('username');
+	    $email = $this->input->post('email_edit');
+	    $data = array(
+	        'email' => $email        
+	    );
+	    $where = array(
+	        'username' => $username
+	    );
+	    $this->user->update_data($where, $data, 'users');
+	    redirect('home/index');
+	    
+	}
+	
 	function hapus($id_perjalanan)
 	{
 		$where = array('id_perjalanan' => $id_perjalanan);

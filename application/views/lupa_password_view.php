@@ -1,33 +1,31 @@
 <html>
 	<head>
-		<title>Login</title>
+		<title>Lupa Password</title>
 		<link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<?php echo form_open('verifylogin'); ?>
+		<?php echo form_open('lupa_password'); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4">
 					<div class="login-panel panel panel-default">
 						<div class="panel-heading">
-                        	<h3 class="panel-title">Masuk ke SIPD</h3>
+                        	<h3 class="panel-title">Untuk melakukan reset password, silakan masukkan username dan email anda</h3>
                     	</div>
 						<div class="panel-body">
 							<?php echo validation_errors(); ?>
 							<form class="form-horizontal">
 							<div class="form-group">
-								<label for="username">Username:</label>
-								<input type="text" id="username" class="form-control" name="username" autofocus/>
-							</div>
+								<label for="username">Username</label>
+								<input type="text" id="username" class="form-control" name="username" autofocus />
+							</div>	
 							<div class="form-group">
-								<label for="password">Password:</label>
-								<input type="password" id="password" class="form-control" name="password" />
-							</div>
-							<button type="submit" class="btn btn-success">Login</button> 
-							<a href="<?php echo base_url(); ?>lupa_password" class="btn btn-outline btn-info " role="button">
-            					Lupa Password
-            				</a>    
+								<label for="email">Email</label>
+								<input type="text" id="email" class="form-control" name="email" />
+							</div>							
+							<button type="submit" class="btn btn-success">Submit</button>
+							<a href="<?php echo base_url();?>/login/index" class="btn btn-danger" role="button">Batal</a>					  
 						</form>
 						</div>
 					</div>
